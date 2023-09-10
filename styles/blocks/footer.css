@@ -21,7 +21,6 @@
 
 }
 
-
 .footer__footer-list-slider {
   position: relative;
   display: flex;
@@ -29,9 +28,7 @@
   width: 3585px;
   height: 761px;
 
-  /* flex-wrap: nowrap; */
   margin-top: 60px;
-  /* padding-bottom: 21px; */
   background-repeat: no-repeat;
   background-image: url(./../../images/footer-png.png);
   background-size: contain;

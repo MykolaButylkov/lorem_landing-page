@@ -1,10 +1,8 @@
-
 const footer = document.querySelector('.footer');
 const footerSlider = document.querySelector('.footer__footer-list-slider');
 const body = document.querySelector('body');
 
 gsap.registerPlugin(ScrollTrigger);
-
 
 gsap.to(footerSlider, {
   x: () => "-=" +
@@ -12,7 +10,7 @@ gsap.to(footerSlider, {
   scrollTrigger: {
     trigger: footerSlider,
     start: () => `${footerSlider.clientHeight} ${window.innerHeight}`,
-    end: () => `${footerSlider.clientHeight} ${(window.innerHeight - (footerSlider.clientHeight * 2))}`,
+    end: () => `${footerSlider.clientHeight} ${window.innerHeight - (footerSlider.clientHeight * 2)}`,
     scrub: 1,
     pin: body,
   },
@@ -32,23 +30,14 @@ gsap.to(footerTl, {
     trigger: footerTl,
     start: 'top bottom',
     end: `top top`,
-    // start: () => `${footerSlider.clientHeight} ${window.innerHeight}`,
-    // end: () => `${footerSlider.clientHeight} ${(window.innerHeight - (footerSlider.clientHeight * 2))}`,
-
-    markers: true,
     scrub: 4,
   }
 
 })
-gsap.set('.footer__footer-slider-timeline', {position:'fixed', transformOrigin:'60vh 0'})
+gsap.set('.footer__footer-slider-timeline', {position:'fixed', transformOrigin:'60vh 100px'})
 
-// const tl = gsap.timeline();
 gsap.ticker.add(() => gsap.to('.footer__footer-slider-timeline',
   { duration: 0, x: -gsap.getProperty(footerSlider, 'x') - '110'}))
-
-// window.onload = window.onresize = () => {
-//    gsap.set('.footer__footer-slider-timeline', { left: innerWidth / 2, top: innerHeight / 2 }); }
-
 const footerListDescription = document.querySelectorAll('.footer-list-slider__descr');
 if (window.innerWidth <= 570) {
   footerListDescription.forEach((el, i) => {
