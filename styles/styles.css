@@ -2,7 +2,13 @@
 @import './utils/mixins.css';
 
 @import "./blocks/header.css";
+@import "./blocks/about-us.css";
 @import "./blocks/footer.css";
+
+* {
+  font-family: 'Unbounded', sans-serif;
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--color-background);
@@ -12,5 +18,9 @@ body {
 }
 
 .page-body {
-  padding: 24px 22px 135px;
+  /* padding: 24px 22px 135px; */
+}
+
+.displayNone {
+  display: none;
 }

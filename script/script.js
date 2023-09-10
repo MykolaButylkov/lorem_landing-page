@@ -15,7 +15,7 @@ if (window.innerWidth > 768) {
       trigger: image,           // Element that triggers the animation
       start: () => `${image.clientHeight} ${window.innerHeight}`,
       end: () => `${image.clientHeight} ${(window.innerHeight - (image.clientHeight * 6)) }`,
-      markers: true,    // Start position of the trigger element
+      // markers: true,    // Start position of the trigger element
       scrub: 1,
       pin: body,
     }
@@ -28,7 +28,7 @@ if (window.innerWidth > 768) {
       trigger: image,           // Element that triggers the animation
       start: "top 90%",
       end: "bottom 70%",
-      markers: true,    // Start position of the trigger element
+      // markers: true,    // Start position of the trigger element
       scrub: 1,
       pin: body,
     }
