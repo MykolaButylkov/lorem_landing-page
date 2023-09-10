@@ -1,0 +1,16 @@
+@import './utils/variables.css';
+@import './utils/mixins.css';
+
+@import "./blocks/header.css";
+@import "./blocks/footer.css";
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-font);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.page-body {
+  padding: 24px 22px 135px;
+}
