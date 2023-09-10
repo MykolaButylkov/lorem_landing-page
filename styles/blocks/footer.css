@@ -1,5 +1,4 @@
 .footer {
-  white-space: nowrap; /* Prevent content from wrapping */
   overflow-x: hidden;
   -ms-overflow-style: none; /* Hide scrollbar on Edge and IE */
   scrollbar-width: none; /* Hide scrollbar on Firefox */
@@ -7,20 +6,104 @@
 ::-webkit-scrollbar {
   display: none; /* Hide scrollbar on Chrome, Safari, and Opera */
 }
+
+.footer__title {
+  font-style: 32px;
+  font-weight: 700;
+}
+.footer__title--black-white {
+  border: 2px solid white; /* Set the border color to white */
+    padding: 10px; /* Add some padding to give it some space */
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set the text color to white */
+}
 .footer__content {
 
 }
-.footer__footer-slider {
+.footer__footer-list-slider {
   display: flex;
-  width: 3000px;
-  background-image: url(./../../images/group-mobile.png);
-  height: 437px;
+  width: 3585px;
+  /* width: 100%; */
+  box-sizing: border-box;
+  background-image: url(./../../images/footer-png.png);
+  /* height: 740px; */
+  height: 761px;
+  background-size: contain;
+  /* flex-wrap: nowrap; */
+  position: relative;
+  padding-bottom: 21px;
+  background-repeat: no-repeat;
+
+  @media (max-width: 570px) {
+    width: 1880px;
+    height: 427px;
+    
+  }
 }
-.footer-slider__content {
-  margin-left: 60px;
-  width: 693px;
-  font-style: 24px;
+.footer-list-slider__item {
+  display: inline-block;
+  font-size: 24px;
   line-height: 32px;
+  /* flex: 1; */
+  width: 693px;
+  height: fit-content;
+
+  @media (max-width: 570px) {
+    font-size: 12px;
+    line-height: 16px;
+
+  }
+}
+.footer-list-slider__title-num {
+  color: var(--color-violet);
+  margin-bottom: 5px;
+}
+.footer-list-slider__title {
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--color-violet);
+}
+
+/* .footer-list-slider__item--end {
+  align-self: flex-end;
+} */
+.footer-list-slider__item--1 {
+  /* margin-left: 60px; */
+  position: relative;
+  width: 600px;
+  left: 148px;
+  @media (max-width: 570px) {
+  }
+}
+.footer-list-slider__item--2 {
+  /* margin-left: -410px; */
+  position: relative;
+
+    top: 500px;
+    /* left: 77px; */
+    left: 336px;
+
+  @media (max-width: 570px) {
+    left: 18px;
+    top: 200px;
+
+  }
+
+}
+.footer-list-slider__item--3 {
+  /* margin-left: -810px; */
+  position: relative;
+
+  left: -30px;
+  @media (max-width: 570px) {
+    left: -15px;
+  }
+}
+.footer-list-slider__item--4 {
+  /* margin-left: -810px; */
+  position: relative;
+
+  left: 0px;
 }
 
 
