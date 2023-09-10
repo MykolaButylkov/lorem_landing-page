@@ -15,37 +15,60 @@
 
 <body class="page-body">
   <header class="header">
-    <!-- <div class="scroll-tracker"></div> -->
-
     <div class="header__header-top header-top">
       <div class="header-top__logo-conteiner">
         <img class="header-top__logo-img" src="images/logo.svg" alt="Company logo">
         <h1 class="header-top__title">Lorem</h1>
       </div>
-      <div class="header-top__links-header-container displayNone">
+      <div class="header-top__links-header-container">
         <a class="links-header-container" href="#">Lorem Ipsum</a>
         <a class="links-header-container" href="#">Lorem Ipsum</a>
         <a class="links-header-container" href="#">Lorem Ipsum</a>
       </div>
-      <button class="header-top__header-talk-btn displayNone" type="button">
+      <a class="header-top__header-talk-btn" href="#">
         Let`s Talk
-      </button>
-      <img class="header-top__header-menu-btn" src="./images/menu-btn.svg" alt="Menu">
+      </a>
+      <a class="header-top__header-menu-btn" href="#menu">
+        <img class="header-top__header-menu-btn" src="./images/menu-btn.svg" alt="Menu">
+      </a>
     </div>
     <div class="header__header-bottom">
-      <h1 class="header-bottom__tagline">Lorem ipsum dolor sit amet consectetur pellentesque</h1>
-      <div class="header-bottom__img-cards-container img-cards-container">
-        <img class="img-cards-container__card1" src="images/card-pay-right.png" alt="Payment card">
-        <img class="img-cards-container__card2" src="images/card-pay-left.png" alt="Payment card">
+      <div class="header-title-container">
+        <h1 class="header-bottom__tagline">Lorem ipsum dolor sit amet consectetur pellentesque</h1>
+        <a class="header-bottom__join-us-btn join-us-btn-desktop" type="button">JOIN US</a>
       </div>
-      <a class="header-bottom__join-us-btn" type="button">JOIN US</a>
-
+      <div class="header-bottom__img-cards-container">
+        <div class="img-cards-container">
+          <img class="img-cards-container__cards" src="./images/cards-pay.png" alt="Payment cards">
+        </div>
+      </div>
+      <a class="header-bottom__join-us-btn join-us-btn-mobile" type="button">JOIN US</a>
     </div>
   </header>
+  <aside class="menu-aside" id="menu">
+    <a class="menu-aside__close-btn" href="#">
+      <img src="images/close-menu-btn.svg" alt="close menu">
+    </a>
+    <ul class="links-container-list">
+      <li>
+        <a class="menu-aside__links" href="#">lorem ipsum</a>
+      </li>
+      <li>
+        <a class="menu-aside__links" href="#">lorem ipsum</a>
+      </li>
+      <li>
+        <a class="menu-aside__links" href="#">lorem ipsum</a>
+      </li>
+      
+    </ul>
+    
+    <a class="menu-aside__talk-btn" type="button" href="#">LET’S TALK</a>
+  </aside>
   <main class="main">
     <div class="main__content">
       <section class="about-us">
         <h2 class="about-us__title">LOREM IPSUM</h2>
+        <img class="about-us__title-stick-diagonal" src="./images/logo.svg">
         <img class="about-us--tetris-img" src="./images/tetris.svg">
         <div class="about-us__content">
           <img class="about-us__circl-img" src="./images/about-us-circle-text.png" alt="About Us">
