@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   padding: 24px 22px 0;
+  margin-bottom: 65px;
 
 }
 
@@ -12,7 +13,6 @@
 .header-top__logo-conteiner {
   display: flex;
   align-items: center;
-
 }
 .header-top__logo-img {
   width: 38px;
@@ -39,6 +39,7 @@
 
 .header-bottom__img-cards-container {
   /* position: relative; */
+  height: 436px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,9 +68,11 @@
 .header-bottom__join-us-btn {
   display: flex;
   justify-content: center;
-  align-items: center;  
-  width: 327px;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 327px;
   height: 56px;
   background-color: var(--color-violet);
   margin: auto;
+  /* padding-inline: 24px; */
 }
