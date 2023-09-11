@@ -39,9 +39,9 @@ gsap.to(footerSlider, {
   x: () => "-=" +
     (footerSlider.clientWidth - window.innerWidth),
   scrollTrigger: {
-    trigger: footerSlider,
+    trigger: footerSlider,  
     start: () => `${footerSlider.clientHeight} ${window.innerHeight}`,
-    end: () => `${footerSlider.clientHeight} ${window.innerHeight - (footerSlider.clientHeight * 2)}`,
+    end: () => `${footerSlider.clientHeight} ${window.innerHeight - (footerSlider.clientHeight* 2)}`,
     scrub: 1,
     pin: body,
   },
@@ -50,7 +50,7 @@ gsap.to(footerSlider, {
 const footerTl = document.querySelector('.footer__footer-slider-timeline');
 gsap.to(footerTl, {
   scaleX: () => {
-    if (window.innerWidth > 570) {
+    if (window.innerWidth > 1070) {
       return 4;
     } else {
       return 2;

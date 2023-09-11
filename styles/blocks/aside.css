@@ -5,21 +5,17 @@
   display: flex;
   flex-direction: column;
   padding-inline: 24px;
-  padding-block: 13px 20px;
+  padding-block: 23px 30px;
   justify-content: space-between;
   
   position: fixed;
   top: 0;
   right: 0;
   left: -100%;
-  /* z-index: 9; */
-
   transition: all 0.3s;
   opacity: 0;
   transform: translateX(0);
   pointer-events: none;
-
-
 }
 
 .menu-aside:target {
@@ -49,12 +45,10 @@
   line-height: 32px;
 }
 
-.menu-aside__links {
-}
-
 .menu-aside__talk-btn {
   text-align: center;
   width: 100%;
-  padding-block: 16px;
   background-color: var(--color-violet);
+  padding-block: 16px;
+  margin-bottom: 40px;
 }
