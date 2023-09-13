@@ -66,7 +66,6 @@ gsap.to(footerTl, {
 })
 
 gsap.from('.about-us__benefits-list', {
-  y: '100px',
   opacity: 0,
   duration: 1,
   scrollTrigger: {
