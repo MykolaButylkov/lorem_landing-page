@@ -65,15 +65,6 @@ gsap.to(footerTl, {
   }
 })
 
-gsap.from('.about-us__benefits-list', {
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '.about-us__title',
-    start: 'top bottom',
-  }
-})
-
 gsap.set(footerTl, { position: 'absolute', transformOrigin: '60vh 100px' })
 
 gsap.ticker.add(() => gsap.to(footerTl,
