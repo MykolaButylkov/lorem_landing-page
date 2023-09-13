@@ -65,13 +65,13 @@ gsap.to(footerTl, {
   }
 })
 
-gsap.from('.about-us__benefits-item', {
-  y: '100%',
-  opasity: 0,
+gsap.from('.about-us__benefits-list', {
+  y: '100px',
+  opacity: 0,
+  duration: 3,
   scrollTrigger: {
-    trigger: '.about-us__benefits-item',
-    start: 'center bottom',
-    end: 'top +20vh',
+    trigger: '.about-us__title',
+    start: 'top bottom',
   }
 })
 
