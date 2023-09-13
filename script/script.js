@@ -60,8 +60,18 @@ gsap.to(footerTl, {
   scrollTrigger: {
     trigger: footerTl,
     start: 'top bottom',
-    end: `top top`,
+    end: 'top top',
     scrub: 4,
+  }
+})
+
+gsap.from('.about-us__benefits-item', {
+  y: '100%',
+  opasity: 0,
+  scrollTrigger: {
+    trigger: '.about-us__benefits-item',
+    start: 'center bottom',
+    end: 'top +20vh',
   }
 })
 
