@@ -99,19 +99,16 @@ gsap.to('.about-us__circl-img', {
 })
 
 gsap.from('.header-top', {
-  y: '-100%',
+  y: window.innerWidth > 570 ? '-100%' : '0',
   duration: 1,
 });
 gsap.from('.header-title-container', {
-  x: '-100%',
-  scaleX: 0.2,
-  duration: 1,
-});
-gsap.from('.img-cards-container', {
-  scaleX: 0.1,
+  x: () =>  window.innerWidth > 570 ? '-100%' : '0',
+  y: () =>  window.innerWidth < 570 ? '-100%' : '0',
   duration: 1,
 });
 gsap.from('.header-bottom__img-cards-container', {
-  x: '100%',
+  x: () =>  window.innerWidth > 570 ? '100%' : '0',
+  y: () =>  window.innerWidth < 570 ? '100%' : '0',
   duration: 1,
 });
