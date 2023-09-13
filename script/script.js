@@ -32,21 +32,22 @@ talkMenu.addEventListener('click', e => {
   enableScroll();
 });
 
+const footerTl = document.querySelector('.footer__footer-slider-timeline');
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(footerSlider, {
   x: () => "-=" +
     (footerSlider.clientWidth - window.innerWidth),
   scrollTrigger: {
-    trigger: footerSlider,  
+    trigger: footerSlider,
     start: () => `${footerSlider.clientHeight} ${window.innerHeight}`,
-    end: () => `${footerSlider.clientHeight} ${window.innerHeight - (footerSlider.clientHeight* 2)}`,
+    end: () => `${footerSlider.clientHeight} ${window.innerHeight - (footerSlider.clientHeight * 2)}`,
     scrub: 1,
     pin: body,
   },
 });
 
-const footerTl = document.querySelector('.footer__footer-slider-timeline');
 gsap.to(footerTl, {
   scaleX: () => {
     if (window.innerWidth > 1070) {
@@ -64,12 +65,14 @@ gsap.to(footerTl, {
   }
 })
 
-gsap.set('.footer__footer-slider-timeline', { position: 'absolute', transformOrigin: '60vh 100px' })
+gsap.set(footerTl, { position: 'absolute', transformOrigin: '60vh 100px' })
 
-gsap.ticker.add(() => gsap.to('.footer__footer-slider-timeline',
+gsap.ticker.add(() => gsap.to(footerTl,
   { duration: 0, x: -gsap.getProperty(footerSlider, 'x') - '110' }))
+
 const footerListDescription = document.querySelectorAll('.footer-list-slider__descr');
 const titleTagline = document.querySelector('.header-bottom__tagline');
+
 
 if (window.innerWidth <= 570) {
   footerListDescription.forEach((el, i) => {
@@ -84,7 +87,6 @@ if (window.innerWidth <= 570) {
     }
   })
 }
-
 if (window.innerWidth > 570) {
   titleTagline.textContent = 'Lorem ipsum dolor sit amet consectetur. Diam fames integer ';
 }
