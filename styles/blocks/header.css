@@ -27,6 +27,12 @@
     display: none;
   }
 }
+
+.links-header-container:hover {
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
 .header-top__logo-conteiner {
   display: flex;
 }
@@ -60,6 +66,12 @@
     display: none;
   }
 }
+
+.header-top__header-talk-btn:hover {
+  background-color: #fff;
+  color: var(--color-violet);
+}
+
 .header-top__header-menu-btn {
   margin: 0;
 
@@ -179,6 +191,11 @@
   @media (min-width: 570px) {
     margin: 0;
   }
+}
+
+.header-bottom__join-us-btn:hover {
+  background-color: #fff;
+  color: var(--color-violet);
 }
 
 .join-us-btn-mobile {
