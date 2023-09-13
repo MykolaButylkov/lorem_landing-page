@@ -29,8 +29,6 @@
 }
 .header-top__logo-conteiner {
   display: flex;
-  align-items: center;
-
 }
 .header-top__logo-img {
   width: 38px;
