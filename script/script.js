@@ -32,7 +32,6 @@ talkMenu.addEventListener('click', e => {
   enableScroll();
 });
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(footerSlider, {
@@ -63,9 +62,9 @@ gsap.to(footerTl, {
     end: `top top`,
     scrub: 4,
   }
-
 })
-gsap.set('.footer__footer-slider-timeline', { position: 'fixed', transformOrigin: '60vh 100px' })
+
+gsap.set('.footer__footer-slider-timeline', { position: 'absolute', transformOrigin: '60vh 100px' })
 
 gsap.ticker.add(() => gsap.to('.footer__footer-slider-timeline',
   { duration: 0, x: -gsap.getProperty(footerSlider, 'x') - '110' }))
