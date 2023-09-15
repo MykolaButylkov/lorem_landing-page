@@ -7,6 +7,7 @@ const btnOff = document.querySelector('.header-top__header-menu-btn');
 const btnOn = document.querySelector('.menu-aside__close-btn');
 const navLink = document.querySelector('.links-container-list');
 const talkMenu = document.querySelector('.menu-aside__talk-btn');
+const main =  document.querySelector('.main')
 
 function disableScroll() {
   body.classList.add('disable-scroll');
@@ -40,32 +41,30 @@ gsap.to(footerSlider, {
   x: () => "-=" +
     (footerSlider.clientWidth - window.innerWidth),
   scrollTrigger: {
-    trigger: footerSlider,
-    start: () => `${footerSlider.clientHeight} ${window.innerHeight}`,
-    end: () => `${footerSlider.clientHeight} ${window.innerHeight - (footerSlider.clientHeight * 2)}`,
+    trigger: () => footerSlider,
+    start: 'bottom bottom',
+    end: () => {
+      if (window.innerWidth < 500) {
+        return 'bottom center';
+      } else {
+        return 'bottom top';
+      }
+    },
     scrub: 1,
     pin: body,
   },
 });
 
 gsap.to(footerTl, {
-  scaleX: () => {
-    if (window.innerWidth > 1070) {
-      return 4;
-    } else {
-      return 2;
-    }
-  },
+  scaleX: () => '6.15',
   transformOrigin: 'left',
   scrollTrigger: {
     trigger: footerTl,
-    start: 'top bottom',
+    start: 'top top',
     end: 'top top',
     scrub: 4,
   }
 })
-
-gsap.set(footerTl, { position: 'absolute', transformOrigin: '60vh 100px' })
 
 gsap.ticker.add(() => gsap.to(footerTl,
   { duration: 0, x: -gsap.getProperty(footerSlider, 'x') - '110' }))
@@ -103,12 +102,12 @@ gsap.from('.header-top', {
   duration: 1,
 });
 gsap.from('.header-title-container', {
-  x: () =>  window.innerWidth > 570 ? '-100%' : '0',
-  y: () =>  window.innerWidth < 570 ? '-100%' : '0',
+  x: () => window.innerWidth > 570 ? '-100%' : '0',
+  y: () => window.innerWidth < 570 ? '-100%' : '0',
   duration: 1,
 });
 gsap.from('.header-bottom__img-cards-container', {
-  x: () =>  window.innerWidth > 570 ? '100%' : '0',
-  y: () =>  window.innerWidth < 570 ? '100%' : '0',
+  x: () => window.innerWidth > 570 ? '100%' : '0',
+  y: () => window.innerWidth < 570 ? '100%' : '0',
   duration: 1,
 });
