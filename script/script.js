@@ -36,32 +36,46 @@ talkMenu.addEventListener('click', e => {
 const footerTl = document.querySelector('.footer__footer-slider-timeline');
 
 gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(footerSlider, {
-  x: () => "-=" +
-    (footerSlider.clientWidth - window.innerWidth),
-  scrollTrigger: {
-    trigger: () => footerSlider,
-    start: `bottom ${window.innerHeight < 1000 ? 'bottom' : '60%'}`,
-    end: () => {
-      if (window.innerWidth < 500) {
-        return 'bottom center';
-      } else {
-        return 'bottom top';
-      }
+function init() {
+  gsap.to(footerSlider, {
+    // x: () => "-=" +
+    //   (footerSlider.clientWidth - window.innerWidth),
+    x: () => window.innerHeight < 1000 
+      ? "-=" + (footerSlider.clientWidth - window.innerWidth)
+      : "-=" + (footerSlider.clientWidth - (window.innerWidth / 1.4)),
+    scrollTrigger: {
+      trigger: () => footerSlider,
+      start: `bottom ${window.innerHeight < 1000 ? 'bottom' : '60%'}`,
+      end: () => {
+        if (window.innerWidth < 500) {
+          return 'bottom center';
+        } else {
+          return 'bottom top';
+        }
+      },
+      scrub: 1,
+      pin: body,
     },
-    scrub: 1,
-    pin: body,
-  },
+  });
+}
+
+window.addEventListener('load', () => {
+  init();
 });
 
 gsap.to(footerTl, {
-  scaleX: '6.15',
+  scaleX: () => window.innerWidth < 768 ? `${Math.floor(footerSlider.clientWidth / window.innerWidth)}.45` : 4,
   transformOrigin: 'left',
   scrollTrigger: {
-    trigger: footerTl,
-    start: 'top top',
-    end: 'top top',
+    trigger: () => footerSlider,
+      start: `bottom ${window.innerHeight < 1000 ? 'bottom' : '60%'}`,
+      end: () => {
+        if (window.innerWidth < 500) {
+          return 'bottom center';
+        } else {
+          return 'bottom top';
+        }
+      },
     scrub: 4,
   }
 })
