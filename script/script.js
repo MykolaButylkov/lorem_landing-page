@@ -42,7 +42,7 @@ gsap.to(footerSlider, {
     (footerSlider.clientWidth - window.innerWidth),
   scrollTrigger: {
     trigger: () => footerSlider,
-    start: 'bottom bottom',
+    start: `bottom ${window.innerHeight < 1000 ? 'bottom' : '60%'}`,
     end: () => {
       if (window.innerWidth < 500) {
         return 'bottom center';
@@ -56,7 +56,7 @@ gsap.to(footerSlider, {
 });
 
 gsap.to(footerTl, {
-  scaleX: () => '6.15',
+  scaleX: '6.15',
   transformOrigin: 'left',
   scrollTrigger: {
     trigger: footerTl,

@@ -39,3 +39,7 @@ h1, h2, h3, h4 {
   top: 0 !important;
   width: 100%;
 }
+
+.pin-spacer {
+  background-color: var(--color-background);
+}
